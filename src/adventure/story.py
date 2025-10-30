@@ -32,7 +32,6 @@ if __name__ == "__main__":
         choice = Prompt.ask(
         "[bold red]Which direction do you choose?[/bold red]",
         choices=["left","right","exit"], default="exit")
-        default="exit"
         
         if choice == "exit":
             console.print("\n[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
