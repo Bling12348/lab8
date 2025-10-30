@@ -14,13 +14,14 @@ def step(choice: str, events):
     elif choice == "right":
         return right_path(random_event)
     else:
-        return "You stand still, unsure what to do. The forest swallows you."
+        return str(Text("You stand still, unsure what to do. The forest swallows you.", style="bold-red"))
 
 def left_path(event):
-    return Text("You walk left. ", style="bold-green") + Text(event, style-"italic-yellow")
-
+    text= Text("You walk left. ", style="bold-green") + Text(event, style="italic-yellow")
+    return str(text)
 def right_path(event):
-    return Text("You walk right. ", style="bold-green") + Text(event, style-"italic-yellow")
+    text= Text("You walk right. ", style="bold-green") + Text(event, style="italic-yellow")
+    return str(text)
 
 if __name__ == "__main__":
     events = read_events_from_file('events.txt')
