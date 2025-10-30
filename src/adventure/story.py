@@ -35,7 +35,7 @@ if __name__ == "__main__":
         default="exit")
         
         if choice == "exit":
-            console.print("\n[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
+            console.print("[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
             break
         
         story_output = step(choice, events)
