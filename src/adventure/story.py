@@ -30,7 +30,7 @@ if __name__ == "__main__":
     console.print("[italic]You can go left or right.[/italic]")    
     while True:
         choice = input(
-        "[bold red]Which direction do you choose? *(left/right/exit):[/bold red] ").strip().lower()
+        "Which direction do you choose? *(left/right/exit): ").strip().lower()
         
         if choice == "exit":
             console.print("[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
