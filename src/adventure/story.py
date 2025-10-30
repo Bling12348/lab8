@@ -31,7 +31,7 @@ if __name__ == "__main__":
         "Which direction do you choose? *(left/right/exit): ").strip().lower()
         
         if choice == "exit":
-            console.print("[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
+            print("[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
             break
         
         print(step(choice, events))
