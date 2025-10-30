@@ -13,6 +13,8 @@ def step(choice: str, events):
         return left_path(random_event)
     elif choice == "right":
         return right_path(random_event)
+    elif choice== "exit":
+        return str(Text("You decide to leave the forest. The adventure ends...", style="bold-magenta"))
     else:
         return str(Text("You stand still, unsure what to do. The forest swallows you.", style="bold-red"))
 
