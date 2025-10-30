@@ -13,8 +13,6 @@ def step(choice: str, events):
         return left_path(random_event)
     elif choice == "right":
         return right_path(random_event)
-    elif choice== "exit":
-        return str(Text("You decide to leave the forest. The adventure ends...", style="bold-magenta"))
     else:
         return str(Text("You stand still, unsure what to do. The forest swallows you.", style="bold-red"))
 
@@ -31,12 +29,14 @@ if __name__ == "__main__":
     console.print("[bold yellow]You wake up in a dark forest.[/bold yellow]")
     console.print("[italic]You can go left or right.[/italic]")    
     while True:
-        choice = Prompt.ask("[bold red]Which direction do you choose?[/bold red]", choices=["left","right","exit"], default="exit")
-        choice = choice.strip().lower()
+        choice = Prompt.ask(
+        "[bold red]Which direction do you choose?[/bold red]",
+        choices=["left","right","exit"], default="exit")
+        default="exit"
         
         if choice == "exit":
             console.print("\n[bold magenta]You decide to leave the forest. The adventure ends...[/bold magenta]")  
-        break
+            break
         
         story_output = step(choice, events)
         console.print(story_output)
